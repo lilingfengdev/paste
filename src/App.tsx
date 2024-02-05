@@ -23,7 +23,7 @@ export default function App() {
   useEffect(() => {
     if (pasteId && state === INITIAL) {
       setState(LOADING);
-      setContent('Loading...');
+      setContent('米店加载中...');
 
       loadFromBytebin(pasteId).then(({ ok, content, type }) => {
         if (ok) {
@@ -59,8 +59,8 @@ function get404Message(pasteId: string) {
        ██║╚██████╔╝     ██║
        ╚═╝ ╚═════╝      ╚═╝
 
-  not found: '${pasteId}'
-  maybe the paste expired?
+  米店的妈妈没有找到: '${pasteId}'
+  你确定你上传了米店的妈妈?
 `;
 }
 
